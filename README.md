@@ -7,3 +7,4 @@
 * ![azbrowski](https://avatars0.githubusercontent.com/u/32486117?s=40&v=4)[Adam Zbrowski](https://github.com/azbrowski)
 * [Bartosz Mazurkiewicz](https://github.com/GitGod)
 <!---![gitgod](https://avatars1.githubusercontent.com/u/16317542?s=40&v=4)--->
+| [<img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;"/><br /><sub>Kent C. Dodds</sub>](https://kentcdodds.com)<br />💁 [📖](https://github.com/kentcdodds/all-contributors/commits?author=kentcdodds) 👀 📢 |
