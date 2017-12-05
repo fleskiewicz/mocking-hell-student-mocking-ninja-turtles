@@ -3,7 +3,9 @@
 ## Mocking Hell - Projekt zespołowy
 ## Testowanie aplikacji Ruby 2017/2018
 
-[![Build Status](https://travis-ci.org/my-rspec/mocking-hell-student-mocking-ninja-turtles.svg?branch=master)](https://travis-ci.org/my-rspec/mocking-hell-student-mocking-ninja-turtles) [![Maintainability](https://api.codeclimate.com/v1/badges/47fe4c51dce92f292c8e/maintainability)](https://codeclimate.com/github/my-rspec/mocking-hell-student-mocking-ninja-turtles/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/47fe4c51dce92f292c8e/test_coverage)](https://codeclimate.com/github/my-rspec/mocking-hell-student-mocking-ninja-turtles/test_coverage)
+[![Build Status](https://travis-ci.org/my-rspec/mocking-hell-student-mocking-ninja-turtles.svg?branch=master)](https://travis-ci.org/my-rspec/mocking-hell-student-mocking-ninja-turtles) 
+[![Maintainability](https://api.codeclimate.com/v1/badges/47fe4c51dce92f292c8e/maintainability)](https://codeclimate.com/github/my-rspec/mocking-hell-student-mocking-ninja-turtles/maintainability) 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/47fe4c51dce92f292c8e/test_coverage)](https://codeclimate.com/github/my-rspec/mocking-hell-student-mocking-ninja-turtles/test_coverage)
 ### Prowadzący: 
 | [<img src="https://avatars1.githubusercontent.com/u/8049?v=3" width="100px;"/><br /><sub>dr Włodzimierz Bzyl</sub>](https://github.com/wbzyl)<br />|
 | :---: |
