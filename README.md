@@ -1,4 +1,4 @@
-[![TMNT](https://img.purch.com/o/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8xOTIvNjgyL2kwMi9UTU5ULmpwZw==)
+![TMNT](https://img.purch.com/o/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8xOTIvNjgyL2kwMi9UTU5ULmpwZw==)
 
 ## Mocking Hell - Projekt zespołowy
 ## Testowanie aplikacji Ruby 2017/2018
