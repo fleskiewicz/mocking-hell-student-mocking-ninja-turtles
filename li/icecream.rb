@@ -1,4 +1,4 @@
-class Icecream
+class icecream
   attr_accessor :id, :taste, :type, :price
 
   def initialize(id, taste, type, price)
