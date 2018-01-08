@@ -29,10 +29,10 @@ end
   end
 
   def valid_products?
-    @products.is_a?(String)  @products.length > 2
+    @products.is_a?(String) && @products.length > 2
   end
 
   def valid_cost?
-    @cost =~ /^[0-9]$/
+    @cost =~ /^[0-9]$/ && @cost > 0
   end
 
