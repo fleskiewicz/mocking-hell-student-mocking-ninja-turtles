@@ -29,21 +29,18 @@ class Bakery
  
   def edit_person(id, firstname, lastname)
     if !@@someone.at(id).nil?
-      if(name!='' || lastname!='' || phone!='')
-        @@someone[id].firstname = firstname if firstname != ''
-        @@someone[id].lastname = lastname if lastname != ''
-        puts "Person with id = #{@@someone[id].id} has been updated."
-        return @@someone[id]
-      else
-        return false
-      end
+    insert_data_edit_person(id, firstname, lastname)
+      puts "Person with id = #{@@someone[id].id} has been updated."
     else
       puts "Person with id = #{id} doesn't appear in database."
-      return false
     end
   end  
-
+    
+  def insert_data_edit_person(id, firstname, lastname)
+    @@someone[id].firstname = firstname if firstname != ''
+    @@someone[id].lastname = lastname if lastname != ''
   end
+    
   def delete_person(id)
     if !@@someone.at(id).nil?
       @@someone[id] = nil
