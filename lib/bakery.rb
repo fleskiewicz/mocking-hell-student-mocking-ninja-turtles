@@ -15,11 +15,19 @@ class Bakery
     end
   end
   
-  def add_someone(id, firstname, lastname)
-    
+  def add_person(id, firstname, lastname)
+    size = @@someone.size
+    id = 0
+    id += 1 while id < size && !@@someone[id].nil?
+    person = Person.new(id, firstname, lastname)
+    @@someone.insert(id, person)
+    puts "Added new person to database:
+    id - #{@@someone[id].id},
+    firstname - #{@@someone[id].firstname},
+    lastname - #{@@someone[id].lastname}."
   end
  
-  def edit_someone(id, firstname, lastname)
+  def edit_person(id, firstname, lastname)
     if !@@someone.at(id).nil?
       @@someone[id].firstname = firstname if firstname != ''
       @@someone[id].lastname = lastname if lastname != ''
@@ -29,7 +37,7 @@ class Bakery
     end
   end  
  
-  def delete_someone(id)
+  def delete_person(id)
     if !@@someone.at(id).nil?
       @@someone[id] = nil
       puts "Person with id = #{id} has been removed."
@@ -50,16 +58,37 @@ class Bakery
     end
   end
  
-  def add_ice
- 
+  def add_ice(id, taste, model, price)
+    size = @@icecream.size
+    id = 0
+    id += 1 while id < size && !@@icecream[id].nil?
+    icecre = Icecream.new(id, taste, model, price)
+    @@icecream.insert(id, icecre)
+    puts "Added new ice cream to database:
+    id - #{@@icecream[id].id},
+    taste - #{@@icecream[id].taste},
+    model - #{@@icecream[id].model},
+    price - #{@@icecream[id].price}."
   end  
   
-  def edit_ice
-  
+  def edit_ice(id, taste, model, price)
+    if !@@icecream.at(id).nil?
+      @@icecream[id].taste = taste if taste != ''
+      @@icecream[id].model = model if model != ''
+      @@icecream[id].price = price if price != ''
+      puts "Ice cream with id = #{@@icecream[id].id} has been updated."
+    else
+      puts "Ice cream with id = #{id} doesn't appear in database."
+    end
   end  
  
   def delete_ice(id)
-  
+    if !@@icecream.at(id).nil?
+      @@icecream[id] = nil
+      puts "Ice cream with id = #{id} has been removed."
+    else
+      puts "Ice cream with id = #{id} doesn't seem to exist."
+    end
   end
  
   #cos
