@@ -11,7 +11,7 @@ RSpec.describe 'someone' do
       expect { someone }.not_to raise_error
     end
 
-    it 'returns Person type' do
+    it 'returns someone type' do
       allow(someone).to receive(:kind_of?).and_return(someone)
       expect(someone).to be_a_kind_of(someone)
     end
