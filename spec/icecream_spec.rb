@@ -4,7 +4,7 @@ RSpec.describe 'Icecream' do
   context '#new' do
     let(:id) { 1 }
     let(:taste) { double('Taste', taste: 'Chocolate') }
-    let(:type) { double('Typ', typ: 'horn') }
+    let(:type) { double('Type', type: 'horn') }
     let(:price) { double('Price', price: '50') }
     subject(:icecream) { Icecream.new id, taste, type, price }
 
@@ -25,8 +25,8 @@ RSpec.describe 'Icecream' do
       expect(icecream.taste).to eq(taste)
     end
 
-    it 'returns correct typ' do
-      expect(icecream.typ).to eq(typ)
+    it 'returns correct type' do
+      expect(icecream.type).to eq(type)
     end
 
     it 'returns correct price' do
