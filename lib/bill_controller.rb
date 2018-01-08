@@ -5,10 +5,6 @@ class BillController
     @bills = bills
   end
 
-  def bills_count
-    @books.bills
-  end
-
   def get_bill(id)
     @bill.find { |s| s.id == id }
   end
