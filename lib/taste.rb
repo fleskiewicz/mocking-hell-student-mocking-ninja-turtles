@@ -1,5 +1,5 @@
 class Taste
-  attr_accessor :id, :Taste, :Price
+  attr_accessor :id, :taste, :price
 
   def initialize(id, taste, price)
     @id = id
