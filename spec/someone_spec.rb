@@ -1,44 +1,41 @@
-require_relative '../lib/person.rb'
+require_relative '../lib/someone.rb'
 
-RSpec.describe 'Person' do
+RSpec.describe 'someone' do
   context '#new' do
     let(:id) { 1 }
     let(:name) { 'Jan' }
-    let(:lastname) { 'Kowalski' }
-    let(:phone) { '123456789' }
-    subject(:person) { Person.new id, name, lastname, phone }
+    let(:lastname) { 'Kowalski' }    
+    subject(:person) { Person.new id, name, lastname }
 
-    it 'creates a new person' do
-      expect { person }.not_to raise_error
+    it 'creates a new someone' do
+      expect { someone }.not_to raise_error
     end
 
     it 'returns Person type' do
-      allow(person).to receive(:kind_of?).and_return(Person)
-      expect(person).to be_a_kind_of(Person)
+      allow(someone).to receive(:kind_of?).and_return(someone)
+      expect(someone).to be_a_kind_of(someone)
     end
 
     it 'returns correct id' do
-      expect(person.id).to eq(id)
+      expect(someone.id).to eq(id)
     end
 
     it 'returns correct name' do
-      expect(person.name).to eq(name)
+      expect(someone.name).to eq(name)
     end
 
     it 'returns correct lastname' do
-      expect(person.lastname).to eq(lastname)
+      expect(someone.lastname).to eq(lastname)
     end
 
-    it 'returns correct phone' do
-      expect(person.phone).to eq(phone)
-    end
+  
   end
 
   context '#to_s' do
-    subject(:person) { Person.new 1, 'Jan', 'Kowalski', '123456789' }
+    subject(:someone) { someone.new 1, 'Kamil', 'Kowalski'}
 
     it 'returns correct output' do
-      expect(person.to_s).to be_a(String).and include('Jan Kowalski 123456789')
+      expect(someone.to_s).to be_a(String).and include('Kamil Kowalski')
     end
   end
 end
