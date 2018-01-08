@@ -4,7 +4,7 @@ class Icecream
   def initialize(id, taste, type, price)
     @id = id
     @taste = taste
-    @model = type
+    @type = type
     @price = price
   end
 
