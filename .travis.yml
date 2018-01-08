@@ -2,3 +2,4 @@ language: ruby
 rvm:
   - 2.4
 script:
+  - cd MergSort; bundle install; bundle exec rspec -fd; cd ..
