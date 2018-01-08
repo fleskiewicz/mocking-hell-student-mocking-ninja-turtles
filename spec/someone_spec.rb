@@ -5,7 +5,7 @@ RSpec.describe 'someone' do
     let(:id) { 1 }
     let(:name) { 'Kamil' }
     let(:lastname) { 'Kowalski' }    
-    subject(:person) { Person.new id, name, lastname }
+    subject(:person) { someone.new id, name, lastname }
 
     it 'creates a new someone' do
       expect { someone }.not_to raise_error
