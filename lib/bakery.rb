@@ -77,15 +77,19 @@ class Bakery
   
   def edit_ice(id, taste, model, price)
     if !@@icecream.at(id).nil?
-      @@icecream[id].taste = taste if taste != ''
-      @@icecream[id].type = type if type != ''
-      @@icecream[id].price = price if price != ''
+      insert_data_edit_person(id, firstname, lastname)
       puts "Ice cream with id = #{@@icecream[id].id} has been updated."
     else
       puts "Ice cream with id = #{id} doesn't appear in database."
     end
   end  
- 
+  
+  def insert_data_edit_ice(id, taste, model, price)
+    @@icecream[id].taste = taste if taste != ''
+    @@icecream[id].type = type if type != ''
+    @@icecream[id].price = price if price != ''
+  end
+    
   def delete_ice(id)
     if !@@icecream.at(id).nil?
       @@icecream[id] = nil
