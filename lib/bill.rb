@@ -24,7 +24,7 @@ end
     @id.is_a?(Numeric)
   end
 
-  def valid_first_name?
+  def valid_name?
     @name.is_a?(String)  && @name.length > 2
   end
 
