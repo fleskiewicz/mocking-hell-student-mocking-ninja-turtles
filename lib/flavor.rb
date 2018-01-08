@@ -3,7 +3,7 @@ class Flavor
 
   def initialize(id, name, price)
     @id = id
-    @taste = name
+    @name = name
     @price = price 
   end
 
