@@ -33,8 +33,13 @@ class Bakery
         @@someone[id].firstname = firstname if firstname != ''
         @@someone[id].lastname = lastname if lastname != ''
         puts "Person with id = #{@@someone[id].id} has been updated."
+        return @@someone[id]
       else
-        puts "Person with id = #{id} doesn't appear in database."
+        return false
+      end
+    else
+      puts "Person with id = #{id} doesn't appear in database."
+      return false
     end
   end  
 
