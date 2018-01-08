@@ -34,8 +34,5 @@ class BillController
     current_bill
   end
   
-  def add_icecream(bill_id, icecream)
-    bill = get_bill(bill_id)
-  end
 
 end
