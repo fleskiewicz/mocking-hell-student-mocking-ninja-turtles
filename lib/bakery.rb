@@ -2,6 +2,7 @@ class Bakery
   attr_accessor :someone, :icecream
   @@someone = []
   @@icecream = []
+  @@flavor = []
 
   
  #osoba
@@ -99,6 +100,50 @@ class Bakery
     end
   end
  
-  #cos
-
+  #smak
+  def show_flavor(id)
+    if !@@icecream.at(id).nil?
+      puts "Icecream with id = #{id}:
+      taste = #{@@icecream[id].taste} ,
+      type = #{@@icecream[id].type} ,
+      price = #{@@icecream[id].price}."
+    else
+      puts "Icecream with id = #{id} doesn't appear to exist. Please add a new one."
+    end
+  end
+    
+  def add_flavor(id, name, price)
+    size = @@flavor.size
+    id = 0
+    id += 1 while id < size && !@@flavor[id].nil?
+    flavo = Flavor.new(id, name, price)
+    @@flavor.insert(id, flavo)
+    puts "Added new flavor to database:
+    id - #{@@flavor[id].id},
+    name - #{@@flavor[id].name},
+    price - #{@@flavor[id].price}."  
+  end
+    
+  def edit_flavor(id, name, price)
+      if !@@flavor.at(id).nil?
+      insert_data_edit_flavor(id, name, price)
+      puts "Flavor with id = #{@@flavor[id].id} has been updated."
+    else
+      puts "Flavor with id = #{id} doesn't appear in database."
+    end
+  end  
+  
+  def insert_data_edit_flavor(id, name, price)
+    @@flavor[id].name = name if name != ''
+    @@flavor[id].price = price if price != ''
+  end
+    
+  def delete_flavor(id) 
+    if !@@flavor.at(id).nil?
+      @@flavor[id] = nil
+      puts "Flavor with id = #{id} has been removed."
+    else
+      puts "Flavor with id = #{id} doesn't seem to exist."
+    end
+  end
 end
