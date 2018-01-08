@@ -3,7 +3,7 @@ require_relative '../lib/someone.rb'
 RSpec.describe 'someone' do
   context '#new' do
     let(:id) { 1 }
-    let(:name) { 'Jan' }
+    let(:name) { 'Kamil' }
     let(:lastname) { 'Kowalski' }    
     subject(:person) { Person.new id, name, lastname }
 
