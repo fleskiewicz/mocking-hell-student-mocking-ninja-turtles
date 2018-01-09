@@ -6,8 +6,6 @@ RSpec.describe 'Flavor' do
     let(:name) { 'strawberry' }
     let(:price) { 5 }
     subject(:flavor) { Flavor.new 1, 'strawberry', 5 }
-    
-    
 
     it 'creates a new flavor' do
       expect { flavor }.not_to raise_error
@@ -23,7 +21,7 @@ RSpec.describe 'Flavor' do
     end
 
     it 'returns correct name' do
-      expect(flavor.name).to eq(name
+      expect(flavor.name).to eq(name)
     end
 
     it 'returns correct price' do
