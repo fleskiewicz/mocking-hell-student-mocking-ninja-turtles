@@ -6,16 +6,20 @@ class Icecream
     @flavor = flavor
     @type = type
     @price = price
-    validate
+    validate1
+    validate2
   end
 
   def to_s
     "#{flavor} #{type} #{price}"
   end
   
-  def validate
+  def validate1
     raise ArgumentError, 'Invalid ID' unless valid_id?
     raise ArgumentError, 'Invalid flavor' unless valid_flavor?
+  end
+  
+  def validate2
     raise ArgumentError, 'Invalid type' unless valid_type?
     raise ArgumentError, 'Invalid price' unless valid_price?
   end
