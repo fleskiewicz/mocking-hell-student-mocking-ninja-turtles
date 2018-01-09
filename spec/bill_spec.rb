@@ -1,31 +1,41 @@
 require_relative '../lib/bill.rb'
 
 RSpec.describe 'Bill' do
-  context '#new' do
+  context '#initializew' do
     let(:id) { 1 }
     let(:name) { 'John' }
     let(:products) { 'cookie' }
     let(:cost) { 22 }
     subject(:bill) { Bill.new 1, 'John', 'cookie', 22 }
 
-    it 'creates a new bill' do
-      expect { bill }.not_to raise_error
+    describe 'when creates a new bill' do
+      it {
+        expect { bill }.not_to raise_error
+      }
     end
 
-    it 'returns correct bill id' do
-      expect(bill.id).to eq(id)
+    describe 'when return correct bill id' do
+      it {      
+	expect(bill.id).to eq(id)
+      }
     end
 
-    it 'returns correct customer name' do
-      expect(bill.name).to eq(name)
+    describe 'when return correct customer name' do
+      it {      
+	expect(bill.name).to eq(name)
+      }
     end
 
-    it 'returns bill products' do
-      expect(bill.products).to eq(products)
+    describe 'when return bill products' do
+      it {
+        expect(bill.products).to eq(products)
+      }
     end
 
-    it 'returns correct bill cost' do
-      expect(bill.cost).to eq(cost)
+    describe 'when return correct bill cost' do
+      it {
+        expect(bill.cost).to eq(cost)
+      }
     end
   end
 
