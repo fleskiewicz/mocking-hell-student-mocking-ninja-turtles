@@ -17,7 +17,7 @@ class Shop
     @icecream_controller.add_icecream(new_icecream)
   end
 
-  def make_bill
+  def make_bill(name)
     cost = 0
     bill_id = @bill_controller.bill_count+1
     @icecream_controller.icecreams.each { |icecream|
