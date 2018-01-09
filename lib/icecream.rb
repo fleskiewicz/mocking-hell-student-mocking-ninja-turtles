@@ -24,11 +24,11 @@ class Icecream
   end
 
   def valid_flavor?
-    @flavor.is_a?(String) && @flavor.length >= 1 && @flavor.length <= 20 && @flavor.chars.first =~ /[A-Z]/
+    @flavor.is_a?(String) && @flavor.length >= 1 && @flavor.length <= 20 
   end
 
   def valid_type?
-    @type.is_a?(String) && @type.length >= 1 && @type.length <= 20 && @type.chars.first =~ /[A-Z]/
+    @type.is_a?(String) && @type.length >= 1 && @type.length <= 20 
   end
 
   def valid_price?
