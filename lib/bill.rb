@@ -4,14 +4,14 @@ class Bill
   def initialize(id, name, products, cost)
     @id = id
     @name = name
-		@products = products
-		@cost = cost
+    @products = products
+    @cost = cost
+    validate
   end
 
   def to_s
     "#{name} #{cost}"
   end
-end
 
   def validate
     raise ArgumentError, 'Invalid ID' unless valid_id?
@@ -35,4 +35,4 @@ end
   def valid_cost?
     @cost =~ /^[0-9]$/ && @cost > 0
   end
-
+end
