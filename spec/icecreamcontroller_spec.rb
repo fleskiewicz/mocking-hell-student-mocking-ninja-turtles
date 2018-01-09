@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe icecream_controller do
-  context 'without users' do
+  context 'without icecreams' do
     subject(:controller) { icecream_controller.new }
 
     describe '.icecream_count' do
