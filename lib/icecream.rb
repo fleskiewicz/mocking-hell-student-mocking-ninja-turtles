@@ -1,14 +1,14 @@
 class Icecream
-  attr_accessor :id, :taste, :type, :price
+  attr_accessor :id, :flavor, :type, :price
 
-  def initialize(id, taste, type, price)
+  def initialize(id, flavor, type, price)
     @id = id
-    @taste = taste
+    @flavor = flavor
     @type = type
     @price = price
   end
 
   def to_s
-    "#{taste} #{type} #{price}"
+    "#{flavor} #{type} #{price}"
   end
 end
