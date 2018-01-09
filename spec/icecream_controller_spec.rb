@@ -43,7 +43,7 @@ RSpec.describe 'IcecreamController' do
     end
   end
 
-  context '#add_flavor' do
+  context '#add_icecream' do
       describe 'when data is correct' do
 
         it {
@@ -80,32 +80,33 @@ RSpec.describe 'IcecreamController' do
 
     end
 
-    describe 'when flavor not found' do
+    describe 'when icecream not found' do
 
       it {
         id = 1
-        new_name = 'Pistacja'
+        new_flavor = 'Pistacja'
+        new_type = 'rozek'
         new_price = 1.50
-        expect { controller.update_flavor(1, new_name, new_price) }.to raise_error(NoMethodError)
+        expect { controller.update_icecream(1, new_flavor,new_type, new_price) }.to raise_error(NoMethodError)
       }
     end
 
   end
 
-  context '#remove_flavor' do
-    describe 'when flavor found' do
+  context '#remove_icecream' do
+    describe 'when icecream found' do
 
       it {
-        controller.add_flavor('Czekolada', 1.50)
-        expect { controller.remove_flavor(1) }.not_to raise_error
+        controller.add_icecream('Czekolada','rozek', 1.50)
+        expect { controller.remove_icecream(1) }.not_to raise_error
       }
 
     end
 
-    describe 'when flavor not found' do
+    describe 'when icecream not found' do
 
       it {
-        expect { controller.remove_flavor(1) }.not_to raise_error
+        expect { controller.remove_icecream(1) }.not_to raise_error
       }
 
     end
