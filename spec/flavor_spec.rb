@@ -33,7 +33,7 @@ RSpec.describe 'Flavor' do
     subject(:flavor) { Flavor.new 1, 'strawberry', 5 }
 
     it 'returns correct output' do
-      expect(flavor.to_s).to be_a(String).and include('strawberry 50')
+      expect(flavor.to_s).to be_a(String).and include('strawberry 5')
     end
   end
 end
