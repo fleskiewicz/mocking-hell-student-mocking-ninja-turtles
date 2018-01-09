@@ -13,20 +13,17 @@ class IcecreamController
     @icecreams.find { |s| s.id == id }
   end
 
-  def add_icecream(icecream)
-    id = get_last_id + 1
-    new_icecream = Icecream.new(id, falvor,type, price)
-    @icecreams.push(new_icecream)
+  def get_last_id
+    @icecreams.last.nil? ? 0 : @icecreams.last.id
   end
 
-  def delete_icecream(id)
-    @icecreams.delete_if { |icecream| icecream.id == id }
+  def add_icecream(icecream)
+    @icecreams.push(icecream)
   end
 
   def update_icecream(id, mod_icecream)
     icecream = get_icecream(id)
-    modified_icecream = Icecream.new(id, new_flavor,new_type, new_price)
-    copy_icecream(icecream, modified_icecream)
+    copy_icecream(icecream, mod_icecream)
   end
 
   def copy_icecream(current_icecream, new_icecream)
@@ -35,5 +32,9 @@ class IcecreamController
     current_icecream.type = new_icecream.type
     current_icecream.price = new_icecream.price
     current_icecream
+  end
+
+  def remove_icecream(id)
+    @icecreams.delete_if { |icecream| icecream.id == id }
   end
 end
