@@ -26,7 +26,7 @@ class Flavor
   end
 
   def valid_price?
-    @id.is_a?(Numeric)
+    @price.is_a?(Numeric)
   end
 
   def to_s
