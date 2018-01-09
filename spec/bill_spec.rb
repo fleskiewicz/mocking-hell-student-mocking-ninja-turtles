@@ -39,6 +39,34 @@ RSpec.describe 'Bill' do
     end
   end
 
+  context '#validate' do
+    subject(:bill) { Bill.new 1, 'John', 'cookie', 22 }
+
+    describe 'when validate id' do
+      it {
+        expect(bill.valid_id?).to eq(true)
+      }
+    end
+
+    describe 'when validate name' do
+      it {
+        expect(bill.valid_name?).to eq(true)
+      }
+    end
+
+    describe 'when validate products' do
+      it {
+        expect(bill.valid_products?).to eq(true)
+      }
+    end
+
+    describe 'when validate cost' do
+      it {
+        expect(bill.valid_cost?).to eq(true)
+      }
+    end
+  end
+
   context '#to_s' do
     subject(:bill) { Bill.new 1, 'John', 'cookie', 22 }
 
