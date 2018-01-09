@@ -1,7 +1,6 @@
 ![TMNT](https://img.purch.com/o/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8xOTIvNjgyL2kwMi9UTU5ULmpwZw==)
 
-## Mocking Hell - Projekt zespołowy
-## Testowanie aplikacji Ruby 2017/2018
+## Mocking Hell - Projekt zespołowy aplikacji Ruby 2017/2018
 
 [![Build Status](https://travis-ci.org/my-rspec/mocking-hell-student-mocking-ninja-turtles.svg?branch=master)](https://travis-ci.org/my-rspec/mocking-hell-student-mocking-ninja-turtles) 
 [![Maintainability](https://api.codeclimate.com/v1/badges/47fe4c51dce92f292c8e/maintainability)](https://codeclimate.com/github/my-rspec/mocking-hell-student-mocking-ninja-turtles/maintainability) 
