@@ -37,10 +37,26 @@ RSpec.describe 'Flavor' do
         expect(flavor.price).to eq(price)
       }
     end
+  end
+
+  context '#validate' do
+    subject(:flavor) { Flavor.new 1, 'strawberry', 5 }
 
     describe 'when validate id' do
       it {
         expect(flavor.valid_id?).to eq(true)
+      }
+    end
+
+    describe 'when validate name' do
+      it {
+        expect(flavor.valid_name?).to eq(true)
+      }
+    end
+
+    describe 'when validate price' do
+      it {
+        expect(flavor.valid_price?).to eq(true)
       }
     end
   end
