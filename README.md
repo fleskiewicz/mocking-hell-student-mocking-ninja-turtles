@@ -12,11 +12,24 @@
 
 ### Ice Cream Parlor
 Program umożliwiający zarządzanie lodziarnią za pośrednictwem aplikacji konsolowej. Użytkownik posiada możliwość zarządzania smakami lodów, które natomiast składają się na całe lody, a te po przyjęciu zamówienia trafiają na łączny rachunek dla klienta.
-Do testów został użyty RSpec w wersji 3.7.0, w którym wykorzystano możliwość mockowania.
+Do testów został użyty RSpec w wersji 3.7.0, przy pomocy którego wykorzystano możliwość mockowania.
 
 _Przykładowe zastosowanie:_
 ```
-**TO DO**
+context '#initialize' do
+    let(:id) { 1 }
+    let(:name) { 'strawberry' }
+    let(:price) { 5 }
+    subject(:flavor) { Flavor.new 1, 'strawberry', 5 }
+
+[...]
+
+    describe 'when return Flavor type' do
+      it {
+        allow(flavor).to receive(:kind_of?).and_return(Flavor)
+        expect(flavor).to be_a_kind_of(Flavor)
+      }
+    end
 ```
 
 
