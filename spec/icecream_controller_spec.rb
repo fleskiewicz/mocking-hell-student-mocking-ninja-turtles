@@ -7,10 +7,10 @@ RSpec.describe 'IcecreamController' do
   context '#get_icecream' do
     describe 'when icecream found' do
       let(:id) { 1 }
-      let(:target) { Icecream.new 1, 'Czekolada', 'rozek' ,1.50 }
+      let(:target) { Icecream.new 1, 'Czekolada', 'rozek' , 1.50 }
 
       it {
-        controller.add_icecream('Czekolada','rozek', 1.50)
+        controller.add_icecream(target)
         expect(controller.get_icecream(id).flavor).to eq(target.flavor)
       }
     end
@@ -34,9 +34,10 @@ RSpec.describe 'IcecreamController' do
     end
 
     describe 'when list has one element' do
+      let(:target) { Icecream.new 1, 'Czekolada', 'rozek' , 1.50 }
 
       it {
-        controller.add_icecream('Czekolada','rozek', 1.50)
+        controller.add_icecream(target)
 
         expect(controller.get_last_id).to eq(1)
       }
@@ -45,22 +46,18 @@ RSpec.describe 'IcecreamController' do
 
   context '#add_icecream' do
       describe 'when data is correct' do
+        let(:target) { Icecream.new 1, 'Czekolada', 'rozek' , 1.50 }
 
         it {
-          flavor = 'Czekolada'
-          type = 'rozek'
-          price = 1.40
-          expect { controller.add_icecream(flavor,type, price) }.not_to raise_error
+          expect { controller.add_icecream(target) }.not_to raise_error
         }
       end
 
       describe 'when data is incorrect' do
+        let(:target) { Icecream.new 1, 'Czekolada', 'rozek' , 'zzz' }
 
         it {
-          flavor = 'Czekolada'
-          type = 'rog pogardy'
-          price = 'zzz'
-          expect { controller.add_icecream(flavor,type, price) }.to raise_error(ArgumentError)
+          expect { controller.add_icecream(target) }.to raise_error(ArgumentError)
         }
       end
 
@@ -68,26 +65,21 @@ RSpec.describe 'IcecreamController' do
 
   context '#update_icecream' do
     describe 'when icecream found' do
+      let(:target) { Icecream.new 1, 'Czekolada', 'rozek' , 10 }
+      let(:modified) { Icecream.new 1, 'Pistacja', 'kubek' , 20 }
 
       it {
-        controller.add_icecream('Czekolada','rozek', 1.50)
-        id = 1
-        new_flavor = 'Pistacja'
-        new_type = 'galka'
-        new_price = 1.50
-        expect { controller.update_icecream(1, new_flavor, new_type, new_price) }.not_to raise_error
+        controller.add_icecream(target)
+        expect { controller.update_icecream(1, modified) }.not_to raise_error
       }
 
     end
 
     describe 'when icecream not found' do
+      let(:modified) { Icecream.new 1, 'Pistacja', 'kubek' , 20 }
 
       it {
-        id = 1
-        new_flavor = 'Pistacja'
-        new_type = 'rozek'
-        new_price = 1.50
-        expect { controller.update_icecream(1, new_flavor,new_type, new_price) }.to raise_error(NoMethodError)
+        expect { controller.update_icecream(1, modified) }.to raise_error(NoMethodError)
       }
     end
 
@@ -95,9 +87,10 @@ RSpec.describe 'IcecreamController' do
 
   context '#remove_icecream' do
     describe 'when icecream found' do
+      let(:target) { Icecream.new 1, 'Czekolada', 'rozek' , 10 }
 
       it {
-        controller.add_icecream('Czekolada','rozek', 1.50)
+        controller.add_icecream(target)
         expect { controller.remove_icecream(1) }.not_to raise_error
       }
 
