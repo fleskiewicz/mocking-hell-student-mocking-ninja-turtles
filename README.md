@@ -12,7 +12,7 @@
 
 ### Ice Cream Parlor
 Program umożliwiający zarządzanie lodziarnią za pośrednictwem aplikacji konsolowej. Użytkownik posiada możliwość zarządzania smakami lodów, które natomiast składają się na całe lody, a te po przyjęciu zamówienia trafiają na łączny rachunek dla klienta.
-Do testów został użyty RSpec w wersji 3.7.0, przy pomocy którego wykorzystano możliwość mockowania.
+Do testów został użyty RSpec w wersji 3.7.0. Liczymy że nasza lodziarnia przypadnie wszystkim do gustu :).
 
 _Przykładowe zastosowanie:_
 ```
