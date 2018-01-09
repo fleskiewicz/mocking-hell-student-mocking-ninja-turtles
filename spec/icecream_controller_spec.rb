@@ -25,6 +25,24 @@ RSpec.describe 'IcecreamController' do
     end
   end
 
+  context '#icecream_count' do
+    describe 'when list is empty' do
+
+      it {
+        expect(controller.icecream_count).to eq(0)
+      }
+    end
+
+    describe 'when list has elements' do
+      let(:target) { Icecream.new 1, 'Czekolada', 'rozek' , 1.50 }
+
+      it {
+        controller.add_icecream(target)
+        expect(controller.icecream_count).to eq(1)
+      }
+    end
+  end
+
   context '#get_last_id' do
     describe 'when list is empty' do
 
