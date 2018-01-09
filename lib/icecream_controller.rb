@@ -26,7 +26,7 @@ class IcecreamController
     copy_icecream(icecream, mod_icecream)
   end
 
-  def copy_icecream(current_book, new_book)
+  def copy_icecream(current_icecream, new_icecream)
     current_icecream.id = new_icecream.id
     current_icecream.flavor = new_icecream.flavor
     current_icecream.type = new_icecream.type
