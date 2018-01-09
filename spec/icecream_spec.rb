@@ -1,7 +1,7 @@
 require_relative '../lib/icecream.rb'
 
 RSpec.describe 'Icecream' do
-  context '#new' do
+  context '#initialize' do
     let(:id) { 1 }
     let(:flavor) { 'chocolate' }
     let(:type) { 'horn' }
@@ -15,7 +15,7 @@ RSpec.describe 'Icecream' do
     end
 
     describe 'when return Icecream type' do
-      it {      
+      it {
 	allow(icecream).to receive(:kind_of?).and_return(Icecream)
         expect(icecream).to be_a_kind_of(Icecream)
       }
@@ -42,6 +42,34 @@ RSpec.describe 'Icecream' do
     describe 'when return correct price' do
       it {
 	expect(icecream.price).to eq(price)
+      }
+    end
+  end
+
+  context '#validate' do
+    subject(:icecream) { Icecream.new 1, 'chocolate', 'horn', 50 }
+
+    describe 'when validate id' do
+      it {
+        expect(icecream.valid_id?).to eq(true)
+      }
+    end
+
+    describe 'when validate flavor' do
+      it {
+        expect(icecream.valid_flavor?).to eq(true)
+      }
+    end
+
+    describe 'when validate type' do
+      it {
+        expect(icecream.valid_type?).to eq(true)
+      }
+    end
+
+    describe 'when validate price' do
+      it {
+        expect(icecream.valid_price?).to eq(true)
       }
     end
   end
