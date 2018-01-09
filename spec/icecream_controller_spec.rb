@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+require_relative '../lib/icecream_controller.rb'
+
 RSpec.describe IcecreamController do
   context 'without icecreams' do
     subject(:manager) { IcecreamController.new }
