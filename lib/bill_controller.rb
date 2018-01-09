@@ -6,15 +6,15 @@ class BillController
   end
 
   def get_bill(id)
-    @bill.find { |s| s.id == id }
+    @bills.find { |s| s.id == id }
   end
 
   def add_bill(bill)
-    @bill.push(bill)
+    @bills.push(bill)
   end
 
   def remove_bill(id)
-    @bill.delete_if { |bill| bill.id == id }
+    @bills.delete_if { |bill| bill.id == id }
   end
 
   def update_bill(id, modified_bill)

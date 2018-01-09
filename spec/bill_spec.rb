@@ -1,7 +1,7 @@
 require_relative '../lib/bill.rb'
 
 RSpec.describe 'Bill' do
-  context '#initializew' do
+  context '#initialize' do
     let(:id) { 1 }
     let(:name) { 'John' }
     let(:products) { 'cookie' }
@@ -15,13 +15,13 @@ RSpec.describe 'Bill' do
     end
 
     describe 'when return correct bill id' do
-      it {      
+      it {
 	expect(bill.id).to eq(id)
       }
     end
 
     describe 'when return correct customer name' do
-      it {      
+      it {
 	expect(bill.name).to eq(name)
       }
     end
