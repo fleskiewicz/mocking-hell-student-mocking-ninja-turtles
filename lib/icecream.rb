@@ -6,6 +6,7 @@ class Icecream
     @flavor = flavor
     @type = type
     @price = price
+    validate
   end
 
   def to_s
