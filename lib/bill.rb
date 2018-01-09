@@ -36,6 +36,6 @@ class Bill
   end
 
   def valid_cost?
-    @cost =~ /^[0-9]$/ && @cost > 0
+    @cost.is_a?(Numeric) && @cost > 0
   end
 end
