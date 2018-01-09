@@ -8,29 +8,41 @@ RSpec.describe 'Icecream' do
     let(:price) { 50 }
     subject(:icecream) { Icecream.new 1, 'chocolate', 'horn', 50 }
 
-    it 'creates a new icecream' do
-      expect { icecream }.not_to raise_error
+    describe 'when creates a new icecream' do
+      it {
+	expect { icecream }.not_to raise_error
+      }
     end
 
-    it 'returns Icecream type' do
-      allow(icecream).to receive(:kind_of?).and_return(Icecream)
-      expect(icecream).to be_a_kind_of(Icecream)
+    describe 'when return Icecream type' do
+      it {      
+	allow(icecream).to receive(:kind_of?).and_return(Icecream)
+        expect(icecream).to be_a_kind_of(Icecream)
+      }
     end
 
-    it 'returns correct id' do
-      expect(icecream.id).to eq(id)
+    describe 'when return correct id' do
+      it {
+	expect(icecream.id).to eq(id)
+      }
     end
 
-    it 'returns correct flavor' do
-      expect(icecream.flavor).to eq(flavor)
+    describe 'when returns correct flavor' do
+      it {
+	expect(icecream.flavor).to eq(flavor)
+      }
     end
 
-    it 'returns correct type' do
-      expect(icecream.type).to eq(type)
+    describe 'when return correct type' do
+      it {
+	expect(icecream.type).to eq(type)
+      }
     end
 
-    it 'returns correct price' do
-      expect(icecream.price).to eq(price)
+    describe 'when return correct price' do
+      it {
+	expect(icecream.price).to eq(price)
+      }
     end
   end
 
