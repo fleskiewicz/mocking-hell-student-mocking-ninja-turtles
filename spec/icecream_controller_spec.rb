@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-RSpec.describe icecreamManager do
+RSpec.describe IcecreamController do
   context 'without icecreams' do
-    subject(:manager) { icecreamManager.new }
+    subject(:manager) { IcecreamController.new }
 
     describe '.icecream_count' do
       let(:expected_number) { 0 }
@@ -25,8 +25,7 @@ RSpec.describe icecreamManager do
   end
 
   context 'with some icecreams' do
-    let(:icecreams) { icecreamFactory.create_many_icecreams }
-    subject(:manager) { icecreamManager.new icecreams }
+    subject(:manager) { IcecreamController.new icecreams }
 
     describe '.icecream_count' do
       let(:expected_number) { icecreams.count }
