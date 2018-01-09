@@ -3,7 +3,7 @@ require_relative '../lib/icecream.rb'
 RSpec.describe 'Icecream' do
   context '#new' do
     let(:id) { 1 }
-    let(:flavor) { double('flavor', flavor: 'Chocolate') }
+    let(:flavor) { double('Flavor', flavor: 'Chocolate') }
     let(:type) { double('Type', type: 'horn') }
     let(:price) { double('Price', price: '50') }
     subject(:icecream) { Icecream.new id, taste, type, price }
