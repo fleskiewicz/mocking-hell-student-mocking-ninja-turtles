@@ -1,4 +1,4 @@
-equire_relative '../lib/icecream.rb'
+require_relative '../lib/icecream.rb'
 require_relative '../lib/icecream_controller.rb'
 
 RSpec.describe 'IcecreamController' do
