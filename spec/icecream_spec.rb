@@ -22,7 +22,7 @@ RSpec.describe 'Icecream' do
     end
 
     it 'returns correct flavor' do
-      expect(icecream.flavor).to eq(taste)
+      expect(icecream.flavor).to eq(flavor)
     end
 
     it 'returns correct type' do
