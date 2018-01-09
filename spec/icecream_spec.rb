@@ -4,7 +4,7 @@ RSpec.describe 'Icecream' do
   context '#new' do
     let(:id) { 1 }
     let(:flavor) { 'chocolate' }
-    let(:type) { 'horn') }
+    let(:type) { 'horn' }
     let(:price) { '50' }
     subject(:icecream) { Icecream.new 1, 'Chocolate', 'Horn', 50 }
     
