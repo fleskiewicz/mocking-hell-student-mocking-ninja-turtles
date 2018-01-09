@@ -47,8 +47,6 @@ RSpec.describe IcecreamController do
     end
 
     describe '.update_icecream' do
-      let(:updated_icecream) { icecreamFactory.create_single_icecream }
-      let(:id) { 2 }
 
       it 'updates certain icecream' do
         expect(manager).to receive(:get_icecream).and_return(icecreams[1], icecreams[1])
