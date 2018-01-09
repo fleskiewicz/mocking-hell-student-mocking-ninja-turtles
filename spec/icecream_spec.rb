@@ -3,7 +3,7 @@ require_relative '../lib/icecream.rb'
 RSpec.describe 'Icecream' do
   context '#new' do
     let(:id) { 1 }
-    let(:taste) { double('Taste', taste: 'Chocolate') }
+    let(:flavor) { double('flavor', flavor: 'Chocolate') }
     let(:type) { double('Type', type: 'horn') }
     let(:price) { double('Price', price: '50') }
     subject(:icecream) { Icecream.new id, taste, type, price }
@@ -21,8 +21,8 @@ RSpec.describe 'Icecream' do
       expect(icecream.id).to eq(id)
     end
 
-    it 'returns correct taste' do
-      expect(icecream.taste).to eq(taste)
+    it 'returns correct flavor' do
+      expect(icecream.flavor).to eq(flavor)
     end
 
     it 'returns correct type' do
