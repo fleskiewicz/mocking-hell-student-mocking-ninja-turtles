@@ -4,7 +4,7 @@ require_relative '../lib/icecream_controller.rb'
 
 RSpec.describe IcecreamController do
   context 'without icecreams' do
-    subject(:manager) { BookManager.new }
+    subject(:manager) { IcecreamController.new }
 
     describe '.icecream_count' do
       let(:expected_number) { 0 }
