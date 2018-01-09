@@ -13,6 +13,7 @@ class Flavor
     raise ArgumentError, 'Invalid ID' unless valid_id?
     raise ArgumentError, 'Invalid name' unless valid_name?
   end
+
   def validate2
     raise ArgumentError, 'Invalid price' unless valid_price?
   end

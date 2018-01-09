@@ -18,7 +18,8 @@ class Bill
     raise ArgumentError, 'Invalid ID' unless valid_id?
     raise ArgumentError, 'Invalid name' unless valid_name?
   end
-    def validate2
+
+  def validate2
     raise ArgumentError, 'Invalid products' unless valid_products?
     raise ArgumentError, 'Invalid cost' unless valid_cost?
   end
@@ -28,7 +29,7 @@ class Bill
   end
 
   def valid_name?
-    @name.is_a?(String)  && @name.length > 2
+    @name.is_a?(String) && @name.length > 2
   end
 
   def valid_products?

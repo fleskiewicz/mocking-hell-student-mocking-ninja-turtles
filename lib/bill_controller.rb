@@ -14,7 +14,7 @@ class BillController
   end
 
   def remove_bill(id)
-    @bill.delete_if{ |bill| bill.id == id }
+    @bill.delete_if { |bill| bill.id == id }
   end
 
   def update_bill(id, modified_bill)
@@ -29,6 +29,4 @@ class BillController
     current_bill.cost = new_bill.cost
     current_bill
   end
-  
-
 end

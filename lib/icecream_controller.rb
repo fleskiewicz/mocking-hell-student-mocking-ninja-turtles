@@ -1,5 +1,5 @@
 class IcecreamController
-attr_accessor :icecreams
+  attr_accessor :icecreams
 
   def initialize(icecream = [])
     @icecream = icecreams
@@ -18,7 +18,7 @@ attr_accessor :icecreams
   end
 
   def delete_icecream(id)
-    @icecreams.delete_if{ |icecream| icecream.id == id }
+    @icecreams.delete_if { |icecream| icecream.id == id }
   end
 
   def edit_icecream(id, mod_icecream)
@@ -33,5 +33,4 @@ attr_accessor :icecreams
     current_icecream.price = new_icecream.price
     current_icecream
   end
-
 end

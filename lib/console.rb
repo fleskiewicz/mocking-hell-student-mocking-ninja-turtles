@@ -29,7 +29,7 @@ class Console
 		end
 		print_menu
 	end
-	
+
 	def print_menu
 		puts
 		puts 'Ice Cream Parlor'
@@ -38,7 +38,7 @@ class Console
 		puts '3) Wyjdz'
 		choose_menu_option
 	end
-	
+
 	def choose_menu_flavor_option
 		c = gets.chomp
 		case c
@@ -56,8 +56,8 @@ class Console
 			print_menu_flavor
 		end
 		print_menu_flavor
-	end	
-	
+	end
+
 	def print_menu_flavor
 		puts
 		puts 'Ice Cream Parlor > Manage flavors'
@@ -68,12 +68,12 @@ class Console
 		puts '5) Return to main menu'
 		choose_menu_flavor_option
 	end
-	
+
 	def display_flavors
 		puts 'List of flavors:'
 		@flavor_controller.flavors.each { |f| puts f.to_s }
 	end
-	
+
 	def add_flavor
 		print 'Name of flavor: '
 		name = gets.chomp
@@ -81,7 +81,7 @@ class Console
 		price = Float(gets.chomp)
 		@flavor_controller.add_flavor(name, price)
 	end
-	
+
 	def update_flavor
 		print 'ID of flavor to edit: '
 		id = Integer(gets.chomp)
@@ -97,5 +97,5 @@ class Console
 		id = Integer(gets.chomp)
 		@flavor_controller.remove_flavor(id)
 	end
-	
+
 end
