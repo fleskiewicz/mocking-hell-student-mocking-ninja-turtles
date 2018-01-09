@@ -7,6 +7,7 @@ class Bill
     @products = products
     @cost = cost
     validate
+    validate2
   end
 
   def to_s
@@ -16,6 +17,8 @@ class Bill
   def validate
     raise ArgumentError, 'Invalid ID' unless valid_id?
     raise ArgumentError, 'Invalid name' unless valid_name?
+  end
+    def validate2
     raise ArgumentError, 'Invalid products' unless valid_products?
     raise ArgumentError, 'Invalid cost' unless valid_cost?
   end
