@@ -6,7 +6,7 @@ RSpec.describe 'Icecream' do
     let(:flavor) { double('Flavor', flavor: 'Chocolate') }
     let(:type) { double('Type', type: 'horn') }
     let(:price) { double('Price', price: '50') }
-    subject(:icecream) { Icecream.new id, taste, type, price }
+    subject(:icecream) { Icecream.new id, flavor, type, price }
 
     it 'creates a new icecream' do
       expect { icecream }.not_to raise_error
