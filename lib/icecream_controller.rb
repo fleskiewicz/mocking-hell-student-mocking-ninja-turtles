@@ -28,7 +28,7 @@ attr_accessor :icecreams
 
   def copy_icecream(current_book, new_book)
     current_icecream.id = new_icecream.id
-    current_icecream.taste = new_icecream.taste
+    current_icecream.flavor = new_icecream.flavor
     current_icecream.type = new_icecream.type
     current_icecream.price = new_icecream.price
     current_icecream
