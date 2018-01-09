@@ -3,19 +3,12 @@ require_relative '../lib/icecream.rb'
 RSpec.describe 'Icecream' do
   context '#new' do
     let(:id) { 1 }
-<<<<<<< HEAD
-    let(:flavor) { double('Flavor', flavor: 'Chocolate') }
-    let(:type) { double('Type', type: 'horn') }
-    let(:price) { double('Price', price: '50') }
-    subject(:icecream) { Icecream.new id, flavor, type, price }
-=======
     let(:flavor) { 'chocolate' }
     let(:type) { 'horn' }
     let(:price) { 50 }
     subject(:icecream) { Icecream.new 1, 'chocolate', 'horn', 50 }
     
     
->>>>>>> origin/master
 
     it 'creates a new icecream' do
       expect { icecream }.not_to raise_error
