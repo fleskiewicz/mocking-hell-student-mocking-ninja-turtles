@@ -25,7 +25,7 @@ class IcecreamController
 
   def edit_icecream(id, mod_icecream)
     icecream = get_icecream(id)
-    modified_icecream = Icream.new(id, new_flavor,new_type, new_price)
+    modified_icecream = Icecream.new(id, new_flavor,new_type, new_price)
     copy_icecream(icecream, modified_icecream)
   end
 
