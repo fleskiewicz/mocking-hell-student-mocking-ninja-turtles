@@ -14,7 +14,9 @@ class IcecreamController
   end
 
   def add_icecream(icecream)
-    @icecreams.push(icecream)
+    id = get_last_id + 1
+    new_icecream = Icecream.new(id, falvor,type, price)
+    @icecreams.push(new_icecream)
   end
 
   def delete_icecream(id)
@@ -23,7 +25,8 @@ class IcecreamController
 
   def edit_icecream(id, mod_icecream)
     icecream = get_icecream(id)
-    copy_icecream(icecream, mod_icecream)
+    modified_icecream = Icream.new(id, new_flavor,new_type, new_price)
+    copy_icecream(icecream, modified_icecream)
   end
 
   def copy_icecream(current_icecream, new_icecream)
