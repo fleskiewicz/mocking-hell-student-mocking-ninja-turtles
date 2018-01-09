@@ -1,8 +1,8 @@
 class IcecreamController
   attr_accessor :icecreams
 
-  def initialize(icecream = [])
-    @icecream = icecreams
+  def initialize(icecreams = [])
+    @icecreams = icecreams
   end
 
   def icecream_count
