@@ -26,7 +26,6 @@ class BillController
     current_bill.id = new_bill.id
     current_bill.name = new_bill.name
     current_bill.products = new_bill.products
-    current_bill.cost = new_bill.cost
     current_bill
   end
 end
