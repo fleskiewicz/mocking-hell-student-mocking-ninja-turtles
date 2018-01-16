@@ -4,9 +4,10 @@ RSpec.describe 'Bill' do
   context '#initialize' do
     let(:id) { 1 }
     let(:name) { 'John' }
-    let(:products) { 'cookie' }
-    let(:cost) { 22 }
-    subject(:bill) { Bill.new 1, 'John', 'cookie', 22 }
+    let(:flavor1) { double('Flavor', id: 1, name: 'Czekoladowe', price: 22) }
+    let(:flavor2) { double('Flavor', id: 2, name: 'Pistacjowe', price: 10) }
+    let(:products) { [flavor1, flavor2] }
+    subject(:bill) { Bill.new 1, 'John', products }
 
     describe 'when creates a new bill' do
       it {
@@ -16,31 +17,32 @@ RSpec.describe 'Bill' do
 
     describe 'when return correct bill id' do
       it {
-	expect(bill.id).to eq(id)
+	       expect(bill.id).to eq(id)
       }
     end
 
     describe 'when return correct customer name' do
       it {
-	expect(bill.name).to eq(name)
+	       expect(bill.name).to eq(name)
       }
     end
 
     describe 'when return bill products' do
       it {
         expect(bill.products).to eq(products)
+        allow(products).to receive(:kind_of?).and_return(products)
+        expect(bill.products).to be_a_kind_of(products)
+        expect(bill.products.to_s).to be_a(String).and include(products.to_s)
       }
     end
 
-    describe 'when return correct bill cost' do
-      it {
-        expect(bill.cost).to eq(cost)
-      }
-    end
   end
 
   context '#validate' do
-    subject(:bill) { Bill.new 1, 'John', 'cookie', 22 }
+    let(:flavor1) { double('Flavor', id: 1, name: 'Czekoladowe', price: 22) }
+    let(:flavor2) { double('Flavor', id: 2, name: 'Pistacjowe', price: 10) }
+    let(:products) { [flavor1, flavor2] }
+    subject(:bill) { Bill.new 1, 'John', products }
 
     describe 'when validate id' do
       it {
@@ -60,18 +62,14 @@ RSpec.describe 'Bill' do
       }
     end
 
-    describe 'when validate cost' do
-      it {
-        expect(bill.valid_cost?).to eq(true)
-      }
-    end
   end
 
   context '#to_s' do
-    subject(:bill) { Bill.new 1, 'John', 'cookie', 22 }
+    let(:products) { double('Flavor', id: 1, name: 'Czekoladowe', price: 22) }
+    subject(:bill) { Bill.new 1, 'John', products }
 
     it 'returns correct bill output' do
-      expect(bill.to_s).to be_a(String).and include('John 22')
+      expect(bill.products.to_s).to be_a(String).and include(products.to_s)
     end
   end
 end

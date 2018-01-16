@@ -7,7 +7,7 @@ RSpec.describe 'BillController' do
   context '#get_bill' do
     describe 'when bill found' do
       let(:id) { 1 }
-      let(:target) { Bill.new 1, 'John', 'Cookie', 2 }
+      let(:target) { Bill.new 1, 'John', 'Cookie' }
 
       it {
         controller.add_bill(target)
@@ -26,7 +26,7 @@ RSpec.describe 'BillController' do
 
   context '#add_bill' do
     describe 'when data is correct' do
-      let(:target) { Bill.new 1, 'John', 'Cookie', 2 }
+      let(:target) { Bill.new 1, 'John', 'Cookie' }
 
       it {
         expect { controller.add_bill(target) }.not_to raise_error
@@ -44,8 +44,8 @@ RSpec.describe 'BillController' do
 
   context '#update_bill' do
     describe 'when bill found' do
-      let(:target) { Bill.new 1, 'John', 'Cookie', 2 }
-      let(:modified) { Bill.new 1, 'Andrew', 'Strawberry', 5 }
+      let(:target) { Bill.new 1, 'John', 'Cookie' }
+      let(:modified) { Bill.new 1, 'Andrew', 'Strawberry' }
 
       it {
         controller.add_bill(target)
@@ -54,7 +54,7 @@ RSpec.describe 'BillController' do
     end
 
     describe 'when bill not found' do
-      let(:modified) { Bill.new 1, 'Andrew', 'Strawberry', 5 }
+      let(:modified) { Bill.new 1, 'Andrew', 'Strawberry' }
 
       it {
         expect { controller.update_bill(1, modified) }.to raise_error(NoMethodError)
@@ -64,7 +64,7 @@ RSpec.describe 'BillController' do
 
   context '#remove_bill' do
     describe 'when bill found' do
-      let(:target) { Bill.new 1, 'John', 'Cookie', 2 }
+      let(:target) { Bill.new 1, 'John', 'Cookie' }
 
       it {
         controller.add_bill(target)
@@ -81,8 +81,8 @@ RSpec.describe 'BillController' do
 
   context '#copy_bill' do
     describe 'when bill found' do
-      let(:target) { Bill.new 1, 'John', 'Cookie', 2 }
-      let(:new_one) { Bill.new 2, 'Adam', 'Vanilia', 3 }
+      let(:target) { Bill.new 1, 'John', 'Cookie' }
+      let(:new_one) { Bill.new 2, 'Adam', 'Vanilia' }
 
       it {
         expect { controller.copy_bill(target, new_one) }.not_to raise_error
@@ -90,7 +90,7 @@ RSpec.describe 'BillController' do
     end
 
     describe 'when bill not found' do
-      let(:new_one) { Bill.new 2, 'Adam', 'Vanilia', 3 }
+      let(:new_one) { Bill.new 2, 'Adam', 'Vanilia' }
       it {
         expect { controller.copy_bill(target, new_one) }.to raise_error(NameError)
       }
