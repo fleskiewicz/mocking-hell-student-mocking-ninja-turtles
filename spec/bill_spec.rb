@@ -69,7 +69,7 @@ RSpec.describe 'Bill' do
     subject(:bill) { Bill.new 1, 'John', products }
 
     it 'returns correct bill output' do
-      expect(bill.products.to_s).to be_a(String).and include(products.to_s)
+      expect(bill.to_s).to be_a(String).and include('John')
     end
   end
 end
